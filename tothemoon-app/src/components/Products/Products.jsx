@@ -6,8 +6,8 @@ import Product from './Product/Product';
 // import useStyles from './Product/styles';
 
 const products = [
-    { id: 1, name: 'Moon Ticket', description: "We're going to the mooon", price: '$5', image: './assets/tickets.jpg'},
-    { id: 2, name: 'Mars Ticket', description: "Elon is going to kill us there", price: '$200', },
+    { id: 1, name: 'Moon Ticket', description: "We're going to the moon!", price: '$5', image: './assets/tickets.jpg'},
+    { id: 2, name: 'Mars Ticket', description: "Elon is going to kill us there", price: '$200', image: './assets/tickets.jpg'},
 ];
 
 const Products = () => {
