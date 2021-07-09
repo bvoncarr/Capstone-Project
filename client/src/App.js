@@ -18,6 +18,12 @@ class App extends Component {
           .then(res => this.setState({ apiResponse: res }))
           .catch(err => err);
   }
+  callAPI() {
+    fetch("http://localhost:9000/users")
+        .then(res => res.text())
+        .then(res => this.setState({ apiResponse: res }))
+        .catch(err => err);
+}
 
   componentDidMount() {
       this.callAPI();
