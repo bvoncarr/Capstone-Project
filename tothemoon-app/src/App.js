@@ -1,6 +1,8 @@
 import React from 'react';
 import Products from './components/Products/Products';
 import Product from './components/Products/Product/Product';
+import Navbar from './components/NavBar/Navbar';
+
 import { makeStyles } from '@material-ui/core/styles';
 import { CssBaseline } from '@material-ui/core';
 import Header from './components/Landing-Page/Header';
@@ -15,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
 const App = () => {
     const classes = useStyles();
     return (
@@ -26,6 +29,7 @@ const App = () => {
          
         </div>
         <div>
+            <Navbar />
             <Products />
         </div>
         </>
