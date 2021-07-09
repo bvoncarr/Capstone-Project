@@ -16,9 +16,19 @@ export default makeStyles((theme) => ({
     alignItems: 'center',
     display: 'flex',
     textDecoration: 'none',
+    fontFamily: 'Quicksand',
+    fontSize: '25px',
+    fontWeight: 'bold',
+    color: '#110F37',
+  },
+  titleColor: {
+    color: '#6377AD',
   },
   image: {
     marginRight: '10px',
+  },
+  cart: {
+    marginRight: '10px;'
   },
   menuButton: {
     marginRight: theme.spacing(2),
