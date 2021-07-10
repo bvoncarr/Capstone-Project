@@ -37,7 +37,6 @@ const App = () => {
             <Navbar />
             <Switch>
               <Route exact path="/" exact component={Header} />
-              <Route path="/MoonorMars"><MoonorMars /></Route>
               <Route path="/moonproducts"><MoonProducts /></Route>
               <Route path="/marsproducts"><MarsProducts /></Route>
             </Switch>
