@@ -24,7 +24,7 @@ const App = () => {
     const [data, setData] = React.useState(null);
 
     React.useEffect(() => {
-        fetch("/api")
+        fetch("/Tickets")
         .then((res) => res.json())
         .then((data) => setData(data.message));
   }, []);
@@ -38,7 +38,6 @@ const App = () => {
             <Navbar />
             <Switch>
               <Route exact path="/" exact component={Header} />
-              {/* <Route path="/MoonorMars"><MoonorMars /></Route> */}
               <Route path="/moonproducts"><MoonProducts /></Route>
               <Route path="/marsproducts"><MarsProducts /></Route>
             </Switch>

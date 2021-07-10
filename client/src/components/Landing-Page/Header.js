@@ -67,12 +67,6 @@ export default function Header() {
     },[])
     return (
         <div className={classes.root} id="header">
-           <AppBar className={classes.appbar}>
-               <Toolbar className={classes.appbarWrapper}>
-                    {/* <h1 className={classes.appbarTitle}>To The <span className={classes.colorText}>
-                        Moon</span></h1> */}
-                  </Toolbar>
-           </AppBar>
            <Collapse in={checked} {...(checked ? { timeout: 1000 } : {})} collapsedSize={50}>
            <div className={classes.container}>
                <h1 className={classes.dreamIntro}>Is your dream to go to outer <span className={classes.colorText}>space</span>?</h1>
