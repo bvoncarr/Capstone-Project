@@ -39,10 +39,9 @@ export default function ImageCard({ place }) {
         <CardMedia
           className={classes.media}
           component="img"
-          alt="The Moon"
           height="140"
           image={place.imageUrl}
-          title="The Moon"
+          title="Our Destinations"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" 
@@ -60,7 +59,7 @@ export default function ImageCard({ place }) {
       </CardActionArea>
      <CardActions>
 
-        <Button size="lg" color="primary" href="#products">
+        <Button size="large" color="primary" href="#products">
          Buy Tickets
         </Button>
       </CardActions>

@@ -73,7 +73,7 @@ export default function Header() {
                         Moon</span></h1>
                   </Toolbar>
            </AppBar>
-           <Collapse in={checked} {...(checked ? { timeout: 1000 } : {})} collapsedHeight={50}>
+           <Collapse in={checked} {...(checked ? { timeout: 1000 } : {})} collapsedSize={50}>
            <div className={classes.container}>
                <h1 className={classes.dreamIntro}>Is your dream to go to outer <span className={classes.colorText}>space</span>?</h1>
                <p className={classes.moreInfo}>We can get you to the <span className={classes.moreInfoColor}>Moon</span> AND <span className={classes.moreInfoColor}>Mars</span>. </p> 
