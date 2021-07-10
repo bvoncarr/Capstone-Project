@@ -33,19 +33,16 @@ const App = () => {
           <div className={classes.root}>
           
             <CssBaseline />
-          <Header />
-          <MoonorMars />
-          </div>
-        <div>
           <Router>
             <Navbar />
             <Switch>
-              
-              
+              <Route exact path="/" exact component={Header} />
+              <Route path="/MoonorMars"><MoonorMars /></Route>
+              <Route path="/moonproducts"><MoonProducts /></Route>
+              <Route path="/marsproducts"><MarsProducts /></Route>
             </Switch>
          
-            <MoonProducts />
-            <MarsProducts />
+
             <p>{!data ? "Loading..." : data}</p>
           </Router>
          </div>

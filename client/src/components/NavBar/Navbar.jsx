@@ -19,9 +19,7 @@ const Navbar = () => {
                         <img src={moon} alt="To The Moon" height="25px" className={classes.image} />
                         ToThe<span className={classes.titleColor}> Moon</span> 
                     </Typography>
-                    <Link to="/MoonProducts">
-                    Moon
-                    </Link>
+
                     <div className={classes.grow} />
                     <div className={classes.button}>
                         <IconButton aria-label="Show cart items" color="inherit">
