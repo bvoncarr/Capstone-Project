@@ -67,7 +67,6 @@ export default function Header() {
     },[])
     return (
         <div className={classes.root} id="header">
-           
            <Collapse in={checked} {...(checked ? { timeout: 1000 } : {})} collapsedSize={50}>
            <div className={classes.container}>
                <h1 className={classes.dreamIntro}>Is your dream to go to outer <span className={classes.colorText}>space</span>?</h1>

@@ -7,7 +7,8 @@ import Navbar from './components/NavBar/Navbar';
 import { makeStyles } from '@material-ui/core/styles';
 import { CssBaseline } from '@material-ui/core';
 import Header from './components/Landing-Page/Header';
-import MoonorMars from './components/Landing-Page/MoonorMars';
+// 
+
 
 const useStyles = makeStyles((theme) => ({
     root: {

@@ -1,9 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-
 import ImageCard from './ImageCard';
 import places from '../../static/places';
-
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -17,14 +15,12 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function MoonorMars () {
+export default function Moon () {
     const classes = useStyles();
-    
+
     return (
-        <div className={classes.root} id="moon-or-mars">
-            <ImageCard place={places[0]}  />
-            <ImageCard place={places[1]} />
+        <div className={classes.root} id="moon">
+            <ImageCard place={places[0]}/>
         </div>
-        
     )
 }
