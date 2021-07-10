@@ -4,10 +4,12 @@ import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 // import { Classes } from '@material-ui/styles';
 import useStyles from './styles';
 
+
 const MarsProduct = ({ product }) => {
     const classes = useStyles();
 
     return (
+       
         <Card className={classes.root}>
             <CardMedia 
                 className={classes.media} 

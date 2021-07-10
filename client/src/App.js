@@ -7,7 +7,8 @@ import Navbar from './components/NavBar/Navbar';
 import { makeStyles } from '@material-ui/core/styles';
 import { CssBaseline } from '@material-ui/core';
 import Header from './components/Landing-Page/Header';
-import MoonorMars from './components/Landing-Page/MoonorMars';
+// 
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -37,7 +38,7 @@ const App = () => {
             <Navbar />
             <Switch>
               <Route exact path="/" exact component={Header} />
-              <Route path="/MoonorMars"><MoonorMars /></Route>
+              {/* <Route path="/MoonorMars"><MoonorMars /></Route> */}
               <Route path="/moonproducts"><MoonProducts /></Route>
               <Route path="/marsproducts"><MarsProducts /></Route>
             </Switch>
