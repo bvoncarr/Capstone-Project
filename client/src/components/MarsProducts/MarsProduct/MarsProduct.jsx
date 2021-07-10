@@ -4,7 +4,7 @@ import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 // import { Classes } from '@material-ui/styles';
 import useStyles from './styles';
 
-const Product = ({ product }) => {
+const MarsProduct = ({ product }) => {
     const classes = useStyles();
 
     return (
@@ -41,4 +41,4 @@ const Product = ({ product }) => {
     )
 }
 
-export default Product;
+export default MarsProduct;

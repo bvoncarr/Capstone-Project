@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, withRouter } from "react-router-dom";
 import { AppBar, Toolbar, IconButton, Badge, MenuItem, Menu, Typography } from '@material-ui/core';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
@@ -18,6 +19,7 @@ const Navbar = () => {
                         <img src={moon} alt="To The Moon" height="25px" className={classes.image} />
                         ToThe<span className={classes.titleColor}> Moon</span> 
                     </Typography>
+
                     <div className={classes.grow} />
                     <div className={classes.button}>
                         <IconButton aria-label="Show cart items" color="inherit">

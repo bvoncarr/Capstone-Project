@@ -1,6 +1,7 @@
 import React from 'react';
-import Products from './components/Products/Products';
-
+import MoonProducts from './components/MoonProducts/MoonProducts';
+import MarsProducts from './components/MarsProducts/MarsProducts';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from './components/NavBar/Navbar';
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -30,14 +31,20 @@ const App = () => {
       return (
           <>
           <div className={classes.root}>
+          
             <CssBaseline />
-          <Header />
-          <MoonorMars />
-          </div>
-        <div>
+          <Router>
             <Navbar />
-            <Products />
+            <Switch>
+              <Route exact path="/" exact component={Header} />
+              <Route path="/MoonorMars"><MoonorMars /></Route>
+              <Route path="/moonproducts"><MoonProducts /></Route>
+              <Route path="/marsproducts"><MarsProducts /></Route>
+            </Switch>
+         
+
             <p>{!data ? "Loading..." : data}</p>
+          </Router>
          </div>
          </>
       );
