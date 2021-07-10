@@ -60,7 +60,7 @@ export default function ImageCard({ place }) {
       </CardActionArea>
      <CardActions>
 
-        <Button size="large" color="primary" href="#products">
+        <Button size="large" color="primary" href="#">
          Buy Tickets
         </Button>
       </CardActions>

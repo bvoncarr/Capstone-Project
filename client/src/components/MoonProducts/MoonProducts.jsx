@@ -21,8 +21,8 @@ const useStyles = makeStyles({
 
 
 const products = [
-    { id: 1, name: 'Moon Ticket - Single', description: "I'm going to the moon!", price: '$5', image: './images/tickets.jpg'},
-    { id: 2, name: 'Family Moon Ticket Package', description: "We're going to the moon!", price: '$50', image: './images/tickets.jpg'},
+    { id: 1, name: 'Moon Ticket - Single', description: "I'm going to the moon!", price: '$50', image: './images/tickets.jpg'},
+    { id: 2, name: 'Family Moon Ticket Package', description: "We're all going to the moon!", price: '$500', image: './images/tickets.jpg'},
 
 ];
 
@@ -30,20 +30,25 @@ const MoonProducts = () => {
   const classes = useStyles();
   return (
 
-    <div id="products">
-      <Moon />
-      <Typography component="h1" 
-          className={classes.title}>Ticket Options for the Moon</Typography>
-      <Box mx={2}  boxShadow={3}>
-      <Grid container justifyContent='center' spacing={2}>
-        {products.map((product) => (
+    <>
+    <Moon />
+    <Typography component="h1"
+    className={classes.title}>Ticket Options for the Moon</Typography>
+
+    <div id="moonProducts">
+     <Box mx={2}  boxShadow={3}>
+       <Grid container justifyContent='center' spacing={2}>
+       {products.map((product) => (
           <Grid item key={product.id}  xs={12} sm={6} md={4} lg={3}>
             <MoonProduct product={product} />
           </Grid>
         ))}
       </Grid>
       </Box>
+    
     </div>
+    </>
+
   )
     
  

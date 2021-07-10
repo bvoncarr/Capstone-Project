@@ -4,7 +4,7 @@ import MarsProduct from './MarsProduct/MarsProduct';
 import Box from '@material-ui/core/Box';
 import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import Mars from '../Landing-Page/Mars'
+import Mars from '../Landing-Page/Mars';
 
 const useStyles = makeStyles({
   
@@ -33,7 +33,7 @@ const MarsProducts = () => {
     <Typography component="h1" 
           className={classes.title}>Ticket Options for Mars</Typography>
        
-    <div id="products">
+    <div id="marsProducts">
       
       <Box mx={2}  boxShadow={3}>
       <Grid container justifyContent='center' spacing={4}>
