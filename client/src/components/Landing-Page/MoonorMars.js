@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function () {
+export default function MoonorMars () {
     const classes = useStyles();
     
     return (
