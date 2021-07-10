@@ -11,7 +11,7 @@ import MoonorMars from './components/Landing-Page/MoonorMars';
 const useStyles = makeStyles((theme) => ({
     root: {
       minHeight: '100vh',
-      backgroundImage: `url(${process.env.PUBLIC_URL + '/assets/galaxy.jpg'})`,
+      backgroundImage: `url(${process.env.PUBLIC_URL + '/images/galaxy.jpg'})`,
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
     },
@@ -22,7 +22,7 @@ const App = () => {
     const [data, setData] = React.useState(null);
 
     React.useEffect(() => {
-        fetch("/api")
+        fetch("/Tickets")
         .then((res) => res.json())
         .then((data) => setData(data.message));
   }, []);
