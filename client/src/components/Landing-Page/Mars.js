@@ -1,9 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-
 import ImageCard from './ImageCard';
 import places from '../../static/places';
-
+import { Link as Scroll } from 'react-scroll';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -17,14 +16,14 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function MoonorMars () {
+export default function Mars () {
     const classes = useStyles();
-    
+
     return (
-        <div className={classes.root} id="moon-or-mars">
-            <ImageCard place={places[0]}  />
-            <ImageCard place={places[1]} />
+        <Scroll to="marsProducts" smooth={true}>
+        <div className={classes.root} id="mars">
+            <ImageCard place={places[1] }/>
         </div>
-        
+        </Scroll>
     )
 }

@@ -9,19 +9,24 @@ import useStyles from './styles';
 
 const Navbar = () => {
     const classes = useStyles();
-    const routes = ["/moonproducts","/marsproducts"]
+    const routes = ["/moonproducts","/marsproducts","/"]
 
     return (
 
         <div>
             <AppBar position="fixed" className={classes.appBar} color="inherit">
                 <Toolbar>
-                    <Typography variant="h6" className={classes.title} color="inherit">
+                    <Typography variant="h6" className={classes.title} color="inherit"
+                    value={routes[2]}
+                    component={Link}
+                    to={routes[2]} 
+                    >
                         <img src={moon} alt="To The Moon" height="25px" className={classes.image} />
                         ToThe<span className={classes.titleColor}> Moon</span> 
                     </Typography>
                         <Tabs>
                             <Tab 
+                                
                                 label="Moon"
                                 value={routes[0]}
                                 component={Link}
