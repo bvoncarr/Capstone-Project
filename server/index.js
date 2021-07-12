@@ -1,6 +1,6 @@
 require ('dotenv').config();
 
-// var cors = require('cors');
+const cors = require('cors');
 const http = require('http');
 
 const express = require('express');
@@ -16,6 +16,9 @@ const PORT = process.env.PORT || 3001;
 const table = 'tickets';
 const db = pgp('postgres://sxxtltyj:QSymmcD0_hcWSxFMto3R_ceP9xL6j6jP@batyr.db.elephantsql.com/sxxtltyj');
 
+app.use(express.json())
+app.use(cors())
+
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
 });
@@ -24,11 +27,13 @@ app.get('/', (req, res) =>{
   res.send('Going to the moon');
 });
 
-app.get('/Tickets', (req, res) =>{
+app.get('/moon', (req, res) =>{
   console.log("in this thang")
 
- db.any("SELECT * FROM tickets") .then((allTickets) =>
+ db.any("SELECT * FROM moon") .then((moon) =>
     //console.log(allTickets));
    
-    res.send(allTickets));
+    res.json(moon));
 });
+
+
