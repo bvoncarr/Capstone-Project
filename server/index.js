@@ -31,9 +31,19 @@ app.get('/moon', (req, res) =>{
   console.log("in this thang")
 
  db.any("SELECT * FROM moon") .then((moon) =>
-    //console.log(allTickets));
+
    
     res.json(moon));
 });
+
+app.get('/mars', (req, res) =>{
+  console.log("in this thang")
+
+ db.any("SELECT * FROM mars") .then((mars) =>
+   
+   
+    res.json(mars));
+});
+
 
 
