@@ -11,24 +11,24 @@ const MoonProduct = ({ product }) => {
         <Card className={classes.root}>
             <CardMedia 
                 className={classes.media} 
-                image={product.image} 
-                title={product.name}/>
+                // image={product.image} 
+                title={product.Company}/>
             <CardContent>
                 <div className={classes.cardContent}>
                     <Typography 
                     variant='h5' 
                     gutterBottom>
-                    {product.name}
+                    {product.Company}
                     </Typography>
                     <Typography 
                     variant='h5'>
-                    {product.price}
+                    {product.Price}
                     </Typography>
                 </div>
                 <Typography 
                     variant='h6' 
                     color="textSecondary">
-                    {product.description}
+                    {product.SpaceShip}
                 </Typography>
             </CardContent>
             <CardActions disableSpacing className={classes.CardActions}>

@@ -21,13 +21,7 @@ const useStyles = makeStyles((theme) => ({
 
 const App = () => {
     const classes = useStyles();
-    const [data, setData] = React.useState(null);
-
-    React.useEffect(() => {
-        fetch("/Tickets")
-        .then((res) => res.json())
-        .then((data) => setData(data.message));
-  }, []);
+    
     
       return (
           <>
@@ -43,7 +37,7 @@ const App = () => {
             </Switch>
          
 
-            <p>{!data ? "Loading..." : data}</p>
+           
           </Router>
          </div>
          </>
