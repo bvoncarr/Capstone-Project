@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '25px',
     },
     colorText: {
-        color: '#6377AD',
+        color: '#FB8DA0',
         fontWeight: 'bold',
     },
     icon: {
@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
     },
     moreInfoColor: {
-        color: '#6377AD',
+        color: '#FB8DA0',
         fontWeight: 'bold',
        fontStyle: 'italic',
     },
@@ -77,8 +77,8 @@ export default function Header() {
            <div className={classes.container}>
                <h1 className={classes.dreamIntro}>Is your dream to go to outer <span className={classes.colorText}>space</span>?</h1>
                <p className={classes.moreInfo}>We can get you to the <span className={classes.moreInfoColor}>Moon</span> AND <span className={classes.moreInfoColor}>Mars</span>. </p> 
-               <p className={classes.moreInfo}>Select your tickets from <span className={classes.moreInfoColor}>Axiom Space</span>, <span className={classes.moreInfoColor}>Blue Origin</span>, or <span className={classes.moreInfoColor}>Virgin Galactic</span>.</p> 
-               <p className={classes.moreInfo}>Want to take your adventure even farther? You can catch a ride to Mars with <span className={classes.moreInfoColor}>SpaceX</span>.</p>
+               <p className={classes.moreInfo}>Select your tickets from <span className={classes.moreInfoColor}>Virgin Galactic</span> or <span className={classes.moreInfoColor}>SpaceX</span>.</p> 
+               
                <Button
                startIcon={<ConfirmationNumberIcon />}
                variant="contained"
