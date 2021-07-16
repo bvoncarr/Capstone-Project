@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
 import { Link, withRouter, Router, Switch, BrowserRouter } from "react-router-dom";
 import { AppBar, Toolbar, IconButton, Badge, MenuItem, Menu, Typography, Tab, Tabs } from '@material-ui/core';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
@@ -10,6 +11,7 @@ import useStyles from './styles';
 const Navbar = () => {
     const classes = useStyles();
     const routes = ["/moonproducts","/marsproducts","/","/cart"]
+    const [cart, setCart] = useContext(CartContext);
 
     return (
 
@@ -45,7 +47,7 @@ const Navbar = () => {
                             <ShoppingCartIcon fontSize="large" 
                             color="primary"
                             className={classes.cart}/>
-                            <Badge badgeContent={2} color="primary"
+                            <Badge badgeContent={cart.length} color="primary"
                             fontSize="large"
                             >
                             </Badge>

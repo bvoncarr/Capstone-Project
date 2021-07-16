@@ -7,6 +7,7 @@ import Cart from './components/Cart/Cart';
 import StripeCheckout from 'react-stripe-checkout';
 import { makeStyles } from '@material-ui/core/styles';
 import { CssBaseline } from '@material-ui/core';
+import { CartProvider } from './context/CartContext'
 import Header from './components/Landing-Page/Header';
 // 
 
@@ -26,6 +27,7 @@ const App = () => {
     
       return (
           <>
+          <CartProvider>
           <div className={classes.root}>
           
             <CssBaseline />
@@ -42,6 +44,7 @@ const App = () => {
            
           </Router>
          </div>
+          </CartProvider>
          </>
       );
   }

@@ -56,6 +56,8 @@ const MoonProducts = () => {
   console.log(moonData)
   return (
 
+    moonData ?
+
     <>
     <Moon />
     <Typography component="h1"
@@ -74,7 +76,7 @@ const MoonProducts = () => {
     
     </div>
     </>
-
+    : ''
   )
     
  
