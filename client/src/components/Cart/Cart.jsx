@@ -7,10 +7,8 @@ import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 
+
 const fetch = require('node-fetch');
-
-
-
 
 const useStyles = makeStyles({
   
@@ -20,10 +18,27 @@ const useStyles = makeStyles({
       fontSize: '30px',
       color: '#fff',
       textAlign: 'center',
+      paddingTop: '150px',
       marginTop: '20px',
+      marginBottom: '20px',
   },
-  
+  itemCount: {
+    fontFamily: 'Quicksand',
+    color: '#fff',
+    fontSize: '20px',
+    paddingTop: '20px',
+  },
+  stripePay: {
+    textAlign: 'center',
+    paddingTop: '50px',
+  },
 });
+
+const products = [
+
+    { id: 3, name: 'Mars Ticket - Single', description: "I'm going to Mars!", price: '$200', image: './images/tickets.jpg'},
+    { id: 4, name: 'Family Mars Ticket Package', description: "We're all going to Mars!" , price: '$2000', image: './images/tickets.jpg'},
+];
 
 function handleToken(token, addresses) {
     console.log({token, addresses })
@@ -34,24 +49,39 @@ const Cart = () => {
     const classes = useStyles();
     const [cart, setCart] = useContext(CartContext);
     console.log(cart.length)
-  return (
+    useEffect(()=> {
+      fetch("http://localhost:3001/mars")
+        .then((res) => res.json())
+        .then((data) => setCart(data));
+    },[]);
 
+
+  return (
+    
     <div className={classes.root}>
-      
+     
+    <Typography component="h1" className={classes.title}>
+     Cart Items 
+     
+      </Typography> 
     <Box mx={2}  boxShadow={3}>
     <Grid container justifyContent='center' spacing={4}>
-      <span>
-      item count : {cart.length}
+    <Typography>
+      <span className={classes.itemCount}>
+      Items in Cart : {cart.length}
       </span>
-    </Grid>
+    </Typography>
     
-
-            <StripeCheckout 
+    </Grid>
+    </Box>      
+    <div className={classes.stripePay}>
+      <StripeCheckout 
                 stripeKey="pk_test_51JCwAjJ2y4foQN28G60krernrOJVvd2uAXm8wmkXJNoyFZTVLuiZdTtIpS1DJr0axUWFaI56sHY18zvrK0atTh7F00Y153pjf0"
                 token={handleToken}
+              
             />
+    </div>
       
-            </Box>      
     
     </div>
 
