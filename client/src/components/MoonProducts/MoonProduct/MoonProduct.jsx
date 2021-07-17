@@ -10,7 +10,7 @@ const MoonProduct = ({ product }) => {
     const [cart, setCart] = useContext(CartContext);
     const addToCart = () => {
 
-        const cartProduct = {name: product.company, price: product.price, spaceship: product.spaceship};
+        const cartProduct = {name: product.company, price: product.price, spaceship: product.spaceship, image: product.pics};
 
    
 
@@ -36,8 +36,6 @@ const MoonProduct = ({ product }) => {
 
                     ${product.price}
 
-                    {product.price}
-
                     </Typography>
                 </div>
                 <Typography 
@@ -45,8 +43,6 @@ const MoonProduct = ({ product }) => {
                     color="textSecondary">
 
                     {product.spaceship}
-
-                    {product.spaceShip}
 
                 </Typography>
             </CardContent>
