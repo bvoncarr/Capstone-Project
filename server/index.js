@@ -56,12 +56,13 @@ app.get('/merch', (req, res) =>{
     res.json(merch));
 });
 
-app.listen(PORT, () => {
-  console.log(`Server listening on ${PORT}`);
-});
+
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname+'/public/index.html'));
 }); 
 
 
+app.listen(PORT, () => {
+  console.log(`Server listening on ${PORT}`);
+});
