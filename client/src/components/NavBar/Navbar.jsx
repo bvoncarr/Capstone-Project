@@ -41,6 +41,20 @@ const Navbar = () => {
                                 component={Link}
                                 to={routes[1]}
                             />
+                            <Tab 
+                                
+                                label="Space Snacks"
+                                value={routes[0]}
+                                component={Link}
+                                to={routes[0]}
+                            />
+                            <Tab 
+                                
+                                label="The Merch"
+                                value={routes[0]}
+                                component={Link}
+                                to={routes[0]}
+                            />
                         </Tabs>
                     <div className={classes.grow} />
                     <div className={classes.button}>

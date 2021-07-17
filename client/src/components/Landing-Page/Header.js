@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Header() {
     const classes = useStyles();
-    const routes = ["/moonproducts", "/marsproducts"]
+    const routes = ["/moonproducts", "/marsproducts", "/snackproducts", "/merchproducts",]
     const [checked, setChecked] = useState(false);
     useEffect(()=> {
         setChecked(true);
