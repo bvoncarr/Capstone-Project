@@ -11,6 +11,19 @@ const places = [
         imageUrl: process.env.PUBLIC_URL + '/images/mars2.jpeg',
         time: 1500,
     },
+    {
+        title: 'In Flight Snacks',
+        description: "You have a long ride ahead of you. Don't go off without the snacks!",
+        imageUrl: process.env.PUBLIC_URL + '/images/inflightSnacks.jpeg',
+        time: 1500,
+    },
+     {
+        title: 'The Merch',
+        description: "No trip to outer space is complete without some swag. Get your moon or Mars tshirts for your flight!",
+        imageUrl: process.env.PUBLIC_URL + '/images/moon-marsShirts.jpg',
+        time: 1500,
+    },
+   
 ];
 
 export default places;

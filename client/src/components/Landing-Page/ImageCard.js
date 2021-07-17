@@ -61,7 +61,7 @@ export default function ImageCard({ place }) {
      <CardActions>
 
         <Button size="large" color="secondary" href="#">
-         See Ticket Options
+         See Buying Options
         </Button>
       </CardActions>
     </Card>

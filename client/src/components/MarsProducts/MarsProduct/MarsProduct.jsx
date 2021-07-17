@@ -10,6 +10,8 @@ const MarsProduct = ({ product }) => {
     const classes = useStyles();
     const [cart, setCart] = useContext(CartContext);
     const addToCart = () => {
+        const cartProduct = {name: product.company, price: product.price};
+        setCart(curr => [...curr, cartProduct]);
         console.log(cart)
     };
 

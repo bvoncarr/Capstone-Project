@@ -23,6 +23,8 @@ export default function Moon () {
         <Scroll to="moonProducts" smooth={true}>
         <div className={classes.root} id="moon">
             <ImageCard place={places[0]}/>
+            <ImageCard place={places[2]} />
+            <ImageCard place={places[3]} />
         </div>
         </Scroll>
     )
