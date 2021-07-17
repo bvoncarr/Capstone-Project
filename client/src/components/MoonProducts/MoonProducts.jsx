@@ -58,7 +58,7 @@ const MoonProducts = () => {
 
     moonData ?
 
-    <>
+    <main>
     <Moon />
     <Typography component="h1"
     className={classes.title}>Ticket Options for the Moon</Typography>
@@ -75,7 +75,7 @@ const MoonProducts = () => {
       </Box>
     
     </div>
-    </>
+    </main>
     : ''
   )
     
