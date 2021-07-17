@@ -4,6 +4,7 @@ import { Link, withRouter, Router, Switch, BrowserRouter } from "react-router-do
 import { AppBar, Toolbar, IconButton, Badge, MenuItem, Menu, Typography, Tab, Tabs } from '@material-ui/core';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
+import tothemoon from '../../assets/tothemoon.png';
 import moon from '../../assets/moon.png';
 import useStyles from './styles';
 
@@ -23,8 +24,8 @@ const Navbar = () => {
                     component={Link}
                     to={routes[2]} 
                     >
-                        <img src={moon} alt="To The Moon" height="25px" className={classes.image} />
-                        ToThe<span className={classes.titleColor}> Moon</span> 
+                        <img src={tothemoon} alt="To The Moon" height="50px" className={classes.image} />
+                        
                     </Typography>
                         <Tabs>
                             <Tab 

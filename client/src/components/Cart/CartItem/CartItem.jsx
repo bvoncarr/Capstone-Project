@@ -30,13 +30,13 @@ const CartItem = ({ product }) => {
                     </Typography>
                     <Typography 
                     variant='h5'>
-                    {product.price}
+                    ${product.price}
                     </Typography>
                 </div>
                 <Typography 
                     variant='h6' 
                     color="textSecondary">
-                    {product.spaceShip}
+                    {product.spaceship}
                 </Typography>
             </CardContent>
             <CardActions disableSpacing className={classes.CardActions}>
