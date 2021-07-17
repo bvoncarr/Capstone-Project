@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import CartItem from './CartItem/CartItem';
 
 
 const fetch = require('node-fetch');
@@ -34,26 +35,26 @@ const Cart = () => {
     const classes = useStyles();
     const [cart, setCart] = useContext(CartContext);
     console.log(cart.length)
+    console.log(cart)
   return (
+    <main>
+        <Typography component="h1"
+        className={classes.title}>Checkout</Typography>
 
-    <div className={classes.root}>
-      
-    <Box mx={2}  boxShadow={3}>
-    <Grid container justifyContent='center' spacing={4}>
-      <span>
-      item count : {cart.length}
-      </span>
-    </Grid>
+        <div id="CartItem">
+        <Box mx={2}  boxShadow={3}>
+        <Grid container justifyContent='center' spacing={2}>
+        {cart.map((product) => (
+            <Grid item key={product.id}  xs={12} sm={6} md={4} lg={3}>
+                <CartItem />
+            </Grid>
+            ))}
+        </Grid>
+        </Box>
+        
+        </div>
+    </main>
     
-
-            <StripeCheckout 
-                stripeKey="pk_test_51JCwAjJ2y4foQN28G60krernrOJVvd2uAXm8wmkXJNoyFZTVLuiZdTtIpS1DJr0axUWFaI56sHY18zvrK0atTh7F00Y153pjf0"
-                token={handleToken}
-            />
-      
-            </Box>      
-    
-    </div>
 
   )
     
