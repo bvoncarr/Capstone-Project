@@ -23,8 +23,8 @@ export default function Mars () {
         <Scroll to="marsProducts" smooth={true}>
         <div className={classes.root} id="mars">
             <ImageCard place={places[1] }/>
-            <ImageCard place={places[2]} />
-            <ImageCard place={places[3]} />
+            {/* <ImageCard place={places[2]} />
+            <ImageCard place={places[3]} /> */}
         </div>
         </Scroll>
     )
