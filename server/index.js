@@ -12,7 +12,7 @@ const server = http.createServer(app);
 const path = require('path');
 
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5000;
 const table = 'tickets';
 const db = pgp('postgres://sxxtltyj:QSymmcD0_hcWSxFMto3R_ceP9xL6j6jP@batyr.db.elephantsql.com/sxxtltyj');
 
@@ -24,9 +24,7 @@ app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
 });
 
-app.get('/', (req, res) =>{
-  res.send('Going to the moon');
-});
+
 
 app.get('/moon', (req, res) =>{
   console.log("in this thang")
