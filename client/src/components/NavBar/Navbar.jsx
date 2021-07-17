@@ -11,7 +11,7 @@ import useStyles from './styles';
 
 const Navbar = () => {
     const classes = useStyles();
-    const routes = ["/moonproducts","/marsproducts","/","/cart"]
+    const routes = ["/moonproducts","/marsproducts","/","/cart","/snackproducts","/merchproducts"]
     const [cart, setCart] = useContext(CartContext);
 
     return (
@@ -44,21 +44,26 @@ const Navbar = () => {
                             <Tab 
                                 
                                 label="Space Snacks"
-                                value={routes[0]}
+                                value={routes[4]}
                                 component={Link}
-                                to={routes[0]}
+                                to={routes[4]}
                             />
                             <Tab 
                                 
                                 label="The Merch"
-                                value={routes[0]}
+                                value={routes[5]}
                                 component={Link}
-                                to={routes[0]}
+                                to={routes[5]}
                             />
                         </Tabs>
                     <div className={classes.grow} />
                     <div className={classes.button}>
-                        <IconButton aria-label="Show cart items" color="inherit" value={routes[3]} component={Link} to={routes[3]}>
+                        <IconButton aria-label="Show cart items" 
+                        color="inherit" 
+                        value={routes[3]} 
+                        component={Link} 
+                        to={routes[3]}>
+
                             <ShoppingCartIcon fontSize="large" 
                             color="primary"
                             className={classes.cart}/>
