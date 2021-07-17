@@ -5,7 +5,9 @@ import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+
 import CartItem from './CartItem/CartItem';
+
 
 
 
@@ -49,8 +51,47 @@ function handleToken(token, addresses) {
 const Cart = () => {
     const classes = useStyles();
     const [cart, setCart] = useContext(CartContext);
+
     console.log(cart.length);
     
+
+
+    console.log(cart.length)
+    // useEffect(()=> {
+    //   fetch("http://localhost:3001/mars")
+    //     .then((res) => res.json())
+    //     .then((data) => setCart(data));
+    // },[]);
+
+
+  return (
+    
+    <div className={classes.root}>
+     
+    <Typography component="h1" className={classes.title}>
+     Cart Items 
+     
+      </Typography> 
+    <Box mx={2}  boxShadow={3}>
+    <Grid container justifyContent='center' spacing={4}>
+    <Typography>
+      <span className={classes.itemCount}>
+      Items in Cart : {cart.length}
+      </span>
+    </Typography>
+    
+    </Grid>
+    </Box>      
+    <div className={classes.stripePay}>
+      <StripeCheckout 
+                stripeKey="pk_test_51JCwAjJ2y4foQN28G60krernrOJVvd2uAXm8wmkXJNoyFZTVLuiZdTtIpS1DJr0axUWFaI56sHY18zvrK0atTh7F00Y153pjf0"
+                token={handleToken}
+              
+            />
+    </div>
+      
+    
+    </div>
 
 
     return (

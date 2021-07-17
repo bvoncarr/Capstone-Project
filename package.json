@@ -1,0 +1,21 @@
+{
+  "name": "Capstone-Project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-prebuild": "cd client && npm install && npm run-script build && mv build ../server/public && cd ../server && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bvoncarr/Capstone-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bvoncarr/Capstone-Project/issues"
+  },
+  "homepage": "https://github.com/bvoncarr/Capstone-Project#readme"
+}

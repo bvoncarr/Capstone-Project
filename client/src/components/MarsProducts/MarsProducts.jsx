@@ -42,6 +42,8 @@ const MarsProducts = () => {
   },[]);
   console.log(marsData)
   return (
+
+    marsData ?
     <>
     <Mars />
     <Typography component="h1" 
@@ -58,8 +60,10 @@ const MarsProducts = () => {
         ))}
       </Grid>
       </Box>
+
     </div>
-       </>
+    </>
+      :''
   )
     
  
