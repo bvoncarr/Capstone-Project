@@ -1,17 +1,12 @@
-
 import React, {useState, useEffect} from 'react';
 import Grid from '@material-ui/core/Grid';
-import MoonProduct from './MoonProduct/MoonProduct';
+import MerchProduct from './MerchProduct/MerchProduct';
 import Box from '@material-ui/core/Box';
-
 import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import Moon from '../Landing-Page/Moon';
+import Merch from '../Landing-Page/Merch';
 
 const fetch = require('node-fetch');
-
-
-
 
 const useStyles = makeStyles({
   
@@ -42,33 +37,33 @@ const products = [
 
 ];
 
-const MoonProducts = () => {
+const MerchProducts = () => {
   const classes = useStyles();
-  const [moonData, setMoonData] = useState([])
+  const [merchData, setMerchData] = useState([])
   useEffect(() => {
     // Update the document title using the browser API
-    fetch("http://localhost:5000/moon")
+    fetch("http://localhost:5000/merch")
           .then((res) => res.json())
-          .then((data) => setMoonData(data));
+          .then((data) => setMerchData(data));
 
 
   },[]);
-  console.log(moonData)
+  console.log(merchData)
   return (
 
-    moonData ?
+    merchData ?
 
     <main>
-    <Moon />
+    <Merch />
     <Typography component="h1"
-    className={classes.title}>Ticket Options for the Moon</Typography>
+    className={classes.title}>Available Merch</Typography>
 
-    <div id="moonProducts">
+    <div id="merchProducts">
      <Box mx={2}  boxShadow={3}>
        <Grid container justifyContent='center' spacing={2}>
-       {moonData.map((product) => (
+       {merchData.map((product) => (
           <Grid item key={product.id}  xs={12} sm={6} md={4} lg={3}>
-            <MoonProduct product={product} />
+            <MerchProduct product={product} />
           </Grid>
         ))}
       </Grid>
@@ -81,4 +76,4 @@ const MoonProducts = () => {
     
  
 }
-export default MoonProducts;
+export default MerchProducts;
