@@ -15,9 +15,6 @@ const MarsProduct = ({ product }) => {
         setCart(curr => [...curr, cartProduct]);
         console.log(cartProduct)
 
-        const cartProduct = {name: product.company, price: product.price};
-        setCart(curr => [...curr, cartProduct]);
-        console.log(cart)
 
     };
 

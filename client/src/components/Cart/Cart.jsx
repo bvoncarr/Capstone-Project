@@ -64,34 +64,34 @@ const Cart = () => {
     // },[]);
 
 
-  return (
+  // return (
     
-    <div className={classes.root}>
+  //   <div className={classes.root}>
      
-    <Typography component="h1" className={classes.title}>
-     Cart Items 
+  //   <Typography component="h1" className={classes.title}>
+  //    Cart Items 
      
-      </Typography> 
-    <Box mx={2}  boxShadow={3}>
-    <Grid container justifyContent='center' spacing={4}>
-    <Typography>
-      <span className={classes.itemCount}>
-      Items in Cart : {cart.length}
-      </span>
-    </Typography>
+  //     </Typography> 
+  //   <Box mx={2}  boxShadow={3}>
+  //   <Grid container justifyContent='center' spacing={4}>
+  //   <Typography>
+  //     <span className={classes.itemCount}>
+  //     Items in Cart : {cart.length}
+  //     </span>
+  //   </Typography>
     
-    </Grid>
-    </Box>      
-    <div className={classes.stripePay}>
-      <StripeCheckout 
-                stripeKey="pk_test_51JCwAjJ2y4foQN28G60krernrOJVvd2uAXm8wmkXJNoyFZTVLuiZdTtIpS1DJr0axUWFaI56sHY18zvrK0atTh7F00Y153pjf0"
-                token={handleToken}
+  //   </Grid>
+  //   </Box>      
+  //   <div className={classes.stripePay}>
+  //     <StripeCheckout 
+  //               stripeKey="pk_test_51JCwAjJ2y4foQN28G60krernrOJVvd2uAXm8wmkXJNoyFZTVLuiZdTtIpS1DJr0axUWFaI56sHY18zvrK0atTh7F00Y153pjf0"
+  //               token={handleToken}
               
-            />
-    </div>
+  //           />
+  //   </div>
       
     
-    </div>
+  //   </div>
 
 
     return (
@@ -126,5 +126,5 @@ const Cart = () => {
       )
         
      
-      }
+  }
     export default Cart;

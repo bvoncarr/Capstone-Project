@@ -12,7 +12,7 @@ const MoonProduct = ({ product }) => {
 
         const cartProduct = {name: product.company, price: product.price, spaceship: product.spaceship};
 
-        const cartProduct = {name: product.company, price: product.price};
+   
 
         setCart(curr => [...curr, cartProduct]);
         console.log(cartProduct)
