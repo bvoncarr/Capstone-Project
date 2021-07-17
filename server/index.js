@@ -20,12 +20,6 @@ app.use(express.json())
 app.use(cors())
 app.use(express.static(path.join(__dirname, '/public')));
 
-app.listen(PORT, () => {
-  console.log(`Server listening on ${PORT}`);
-});
-
-
-
 app.get('/moon', (req, res) =>{
   console.log("in this thang")
 
@@ -60,6 +54,10 @@ app.get('/merch', (req, res) =>{
    
    
     res.json(merch));
+});
+
+app.listen(PORT, () => {
+  console.log(`Server listening on ${PORT}`);
 });
 
 app.get('*', (req, res) => {
