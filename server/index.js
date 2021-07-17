@@ -18,6 +18,7 @@ const db = pgp('postgres://sxxtltyj:QSymmcD0_hcWSxFMto3R_ceP9xL6j6jP@batyr.db.el
 
 app.use(express.json())
 app.use(cors())
+app.use(express.static(path.join(__dirname, '/public')));
 
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
@@ -45,5 +46,26 @@ app.get('/mars', (req, res) =>{
     res.json(mars));
 });
 
+app.get('/snacks', (req, res) =>{
+  console.log("in this thang")
+
+ db.any("SELECT * FROM snacks") .then((snacks) =>
+   
+   
+    res.json(snacks));
+});
+
+app.get('/merch', (req, res) =>{
+  console.log("in this thang")
+
+ db.any("SELECT * FROM merch") .then((merch) =>
+   
+   
+    res.json(merch));
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname+'/public/index.html'));
+}); 
 
 
