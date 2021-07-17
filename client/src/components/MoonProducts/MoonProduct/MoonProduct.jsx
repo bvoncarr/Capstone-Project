@@ -18,7 +18,7 @@ const MoonProduct = ({ product }) => {
         <Card className={classes.root}>
             <CardMedia 
                 className={classes.media} 
-                // image={product.image} 
+                image={product.pics} 
                 title={product.company}/>
             <CardContent>
                 <div className={classes.cardContent}>
