@@ -20,23 +20,23 @@ const CartItem = ({ product }) => {
             <CardMedia 
                 className={classes.media} 
                 // image={product.image} 
-                title={cart.name}/>
+                title={product.name}/>
             <CardContent>
                 <div className={classes.cardContent}>
                     <Typography 
                     variant='h5' 
                     gutterBottom>
-                    {cart.name}
+                    {product.name}
                     </Typography>
                     <Typography 
                     variant='h5'>
-                    {cart.price}
+                    {product.price}
                     </Typography>
                 </div>
                 <Typography 
                     variant='h6' 
                     color="textSecondary">
-                    {cart.spaceShip}
+                    {product.spaceShip}
                 </Typography>
             </CardContent>
             <CardActions disableSpacing className={classes.CardActions}>

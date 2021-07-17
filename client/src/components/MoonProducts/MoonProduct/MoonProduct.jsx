@@ -9,7 +9,7 @@ const MoonProduct = ({ product }) => {
     const classes = useStyles();
     const [cart, setCart] = useContext(CartContext);
     const addToCart = () => {
-        const cartProduct = {name: product.company, price: product.price};
+        const cartProduct = {name: product.company, price: product.price, spaceship: product.spaceship};
         setCart(curr => [...curr, cartProduct]);
         console.log(cartProduct)
     }
@@ -29,13 +29,13 @@ const MoonProduct = ({ product }) => {
                     </Typography>
                     <Typography 
                     variant='h5'>
-                    {product.price}
+                    ${product.price}
                     </Typography>
                 </div>
                 <Typography 
                     variant='h6' 
                     color="textSecondary">
-                    {product.spaceShip}
+                    {product.spaceship}
                 </Typography>
             </CardContent>
             <CardActions disableSpacing className={classes.CardActions}>
