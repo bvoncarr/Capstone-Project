@@ -49,11 +49,11 @@ const Cart = () => {
     const classes = useStyles();
     const [cart, setCart] = useContext(CartContext);
     console.log(cart.length)
-    useEffect(()=> {
-      fetch("http://localhost:3001/mars")
-        .then((res) => res.json())
-        .then((data) => setCart(data));
-    },[]);
+    // useEffect(()=> {
+    //   fetch("http://localhost:3001/mars")
+    //     .then((res) => res.json())
+    //     .then((data) => setCart(data));
+    // },[]);
 
 
   return (

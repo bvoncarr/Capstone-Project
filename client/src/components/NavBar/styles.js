@@ -23,7 +23,8 @@ export default makeStyles((theme) => ({
     color: '#110F37',
   },
   titleColor: {
-    color: '#6377AD',
+    color: '#FB8DA0',
+    fontWeight: 'bold',
   },
   image: {
     marginRight: '10px',
