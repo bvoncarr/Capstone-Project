@@ -10,7 +10,7 @@ const SnackProduct = ({ product }) => {
     const [cart, setCart] = useContext(CartContext);
     const addToCart = () => {
 
-        const cartProduct = {name: product.item, price: product.price, description: product.description};
+        const cartProduct = {name: product.item, price: product.price, description: product.description, image: product.pics};
 
    
 

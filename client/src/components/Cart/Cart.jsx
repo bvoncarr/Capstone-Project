@@ -51,7 +51,7 @@ function handleToken(token, addresses) {
 const Cart = () => {
     const classes = useStyles();
     const [cart, setCart] = useContext(CartContext);
-
+    const totalPrice = cart.reduce((acc, curr) => acc + curr.price, 0);
     console.log(cart.length);
     
 
@@ -111,6 +111,9 @@ const Cart = () => {
             ))}
         
         </Grid>
+          <Typography component="h1" className={classes.title}>
+         Total Price: ${totalPrice}
+          </Typography> 
         </Box>      
         <div className={classes.stripePay}>
           <StripeCheckout 
