@@ -4,6 +4,7 @@ import { Card, CardMedia, CardContent, CardActions, Typography, IconButton } fro
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 // import { Classes } from '@material-ui/styles';
 import useStyles from './styles';
+import Tooltip from '@material-ui/core/Tooltip';
 
 const MoonProduct = ({ product }) => {
     const classes = useStyles();
@@ -50,9 +51,11 @@ const MoonProduct = ({ product }) => {
                 </Typography>
             </CardContent>
             <CardActions disableSpacing className={classes.CardActions}>
-                <IconButton aria-label="Add to Cart" onClick={addToCart}>
+                <Tooltip title="Add to Cart">
+                <IconButton aria-label="Add to Cart" onClick={addToCart} className={classes.addIcon}>
                     <AddShoppingCartIcon  />
                 </IconButton>
+                </Tooltip>
             </CardActions>
         </Card>
             
