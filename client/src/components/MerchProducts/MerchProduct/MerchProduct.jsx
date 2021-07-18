@@ -45,7 +45,7 @@ const MerchProduct = ({ product }) => {
 
                     {product.description}
 
-                    {product.description}
+                   
 
                 </Typography>
             </CardContent>
