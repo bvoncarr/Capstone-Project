@@ -1,5 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 
+
 export default makeStyles(() => ({
     root: {
         maxWidth: '100%',
@@ -20,5 +21,14 @@ export default makeStyles(() => ({
     ticketSales: {
         color: '#fff',
         
+    },
+    addIcon: {
+        flexGrow: 1,
+    },
+    removeIcon: {
+        flexGrow: 1,
+    },
+    clearCart: {
+        flexGrow: 1,
     },
 }));

@@ -22,4 +22,7 @@ export default makeStyles(() => ({
         color: '#fff',
         
     },
+    addIcon: {
+        flexGrow: 1,
+    },
 }));
