@@ -19,9 +19,9 @@ const CartItem = ({ product }) => {
    
    
 // This addItem NEEDS to add one more of the same item already in cart - it does NOT work
-    const addItem = (product) => {
-        setCart([...cart]);
-    };
+    // const addItem = (product) => {
+    //     setCart([...cart]);
+    // };
 
 // This function removes/hides one item in the cart & does NOT work
 
@@ -74,7 +74,7 @@ const CartItem = ({ product }) => {
             <CardActions disableSpacing className={classes.CardActions}>
                 <Tooltip title="Add Item">
                     <IconButton aria-label="Add Item" className={classes.addIcon} >
-                        <AddBoxIcon onClick={addItem}/>
+                        <AddBoxIcon onClick={console.log("you clicked me")}/>
                     </IconButton>
                 </Tooltip>
                 <Tooltip title="Remove Item">
