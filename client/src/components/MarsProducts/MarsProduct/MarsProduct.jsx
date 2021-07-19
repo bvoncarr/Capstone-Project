@@ -35,7 +35,7 @@ const MarsProduct = ({ product }) => {
                     </Typography>
                     <Typography 
                     variant='h5'>
-                    ${product.price}
+                    ${product.price.toFixed(2)}
                     </Typography>
                 </div>
                 <Typography 

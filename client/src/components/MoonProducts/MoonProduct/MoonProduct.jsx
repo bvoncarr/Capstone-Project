@@ -35,7 +35,7 @@ const MoonProduct = ({ product }) => {
                     <Typography 
                     variant='h5'>
 
-                    ${product.price}
+                    ${product.price.toFixed(2)}
 
               
 

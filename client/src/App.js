@@ -6,7 +6,7 @@ import MerchProducts from './components/MerchProducts/MerchProducts';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from './components/NavBar/Navbar';
 import Cart from './components/Cart/Cart';
-// import Sound from 'react-sound'; **Do we need this?**
+import Sound from 'react-sound'; 
 import StripeCheckout from 'react-stripe-checkout';
 import { makeStyles } from '@material-ui/core/styles';
 import { CssBaseline } from '@material-ui/core';
