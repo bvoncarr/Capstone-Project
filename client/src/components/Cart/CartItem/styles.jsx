@@ -31,4 +31,5 @@ export default makeStyles(() => ({
     clearCart: {
         flexGrow: 1,
     },
+   
 }));

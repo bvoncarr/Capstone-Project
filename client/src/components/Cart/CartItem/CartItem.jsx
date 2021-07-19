@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { CartContext } from '../../../context/CartContext';
 import { Card, CardMedia, CardContent, CardActions, Typography, IconButton } from '@material-ui/core';
 // import { Classes } from '@material-ui/styles';
@@ -14,65 +14,78 @@ import Tooltip from '@material-ui/core/Tooltip';
 const CartItem = ({ product }) => {
     const classes = useStyles();
     const [cart, setCart] = useContext(CartContext);
-   
-    
-// This remove from cart removes ALL items instead of just one.
-      const clearCart = (productToRemove) => {
-      setCart(
-        cart.filter((product) => product.id !== productToRemove.id)
-      )
-        console.log("this is the " + productToRemove);
-      
-      
-    }
+    const [cartItem, setCartItem] = useState(0);
 
+   
+   
+// This addItem NEEDS to add one more of the same item already in cart - it does NOT work
+    const addItem = (product) => {
+        setCart([...cart]);
+    };
+
+// This function removes/hides one item in the cart & does NOT work
+
+//    const removeItem = product => {
+//        setCart([...cart].filter(product => product.id !== product.id))
+//    }
+   
+// This was Corey's code for the remove from cart.
     // const removeFromCart = () => {
     //     const cartProduct = {name: product.Company, price: product.Price};
     //     setCart(curr => [...curr, cartProduct]);
     //     console.log(cartProduct)
     // }
 
+// This clearCart function removes ALL items instead of just one it DOES work. 
+      const clearCart = (productsToRemove) => {
+      setCart(
+        cart.filter((product) => product.id !== productsToRemove.id)
+      ) 
+    }
+
+
+
     return (
         <Card className={classes.root}>
             <CardMedia 
-            className={classes.media}
-            image="/images/doge-moon.jpeg"
-            title={product.name}/>
+                className={classes.media}
+                 image="/images/doge-moon.jpeg"
+                title={product.name}/>
             <CardContent>
                 <div className={classes.cardContent}>
                     <Typography 
-                    variant='h5' 
-                    gutterBottom>    
-                    {product.name}
+                        variant='h5' 
+                        gutterBottom>    
+                        {product.name}
                     </Typography>
                     <Typography 
-                    variant='h5'>
-                    ${product.price}
+                        variant='h5'>
+                        ${product.price.toFixed(2)}
                     </Typography>
                 </div>
-                <Typography 
-                    variant='h6' 
-                    color="textSecondary">
-                    {product.spaceship}
-                </Typography>
+                    <Typography 
+                        variant='h6' 
+                        color="textSecondary">
+                        {product.spaceship}
+                    </Typography>
             </CardContent>
          
            
             <CardActions disableSpacing className={classes.CardActions}>
                 <Tooltip title="Add Item">
-                <IconButton aria-label="Add Item" className={classes.addIcon} >
-                <AddBoxIcon />
-                </IconButton>
+                    <IconButton aria-label="Add Item" className={classes.addIcon} >
+                        <AddBoxIcon onClick={addItem}/>
+                    </IconButton>
                 </Tooltip>
                 <Tooltip title="Remove Item">
-                <IconButton aria-label="Remove Item" className={classes.removeIcon}>
-                <IndeterminateCheckBoxIcon />
-                </IconButton>
+                    <IconButton aria-label="Remove Item" className={classes.removeIcon}>
+                        <IndeterminateCheckBoxIcon onClick={console.log("you clicked me")}/>
+                    </IconButton>
                 </Tooltip>
                 <Tooltip title="Clear Cart">
-                <IconButton aria-label="Clear Cart" className={classes.clearCart}>
-                <RemoveShoppingCartIcon onClick={clearCart}/>
-                </IconButton>
+                    <IconButton aria-label="Clear Cart" className={classes.clearCart}>
+                        <RemoveShoppingCartIcon onClick={clearCart}/>
+                    </IconButton>
                 </Tooltip>
             </CardActions>
              
