@@ -1,7 +1,7 @@
 const places = [
     {
         title: 'The Moon',
-        description: "The Moon is 238,900 miles from Earth. Everyone has looked up to the moon and wondered what was up there. How would you like to find out? The moon can be yours!",
+        description: "The Moon is 238,900 miles from Earth, and is Earth's only natural satellite. It is the largest object in our nighttime sky and is full of mystery. Everyone has looked up to the moon and wondered what was up there. How would you like to find out? The moon can be yours, today!",
         imageUrl: process.env.PUBLIC_URL + '/images/viewOfEarth.jpeg',
         time: 1500,
     },

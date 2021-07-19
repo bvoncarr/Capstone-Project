@@ -21,9 +21,9 @@ const useStyles = makeStyles({
       fontSize: '30px',
       color: '#fff',
       textAlign: 'center',
-      paddingTop: '150px',
-      marginTop: '20px',
-      marginBottom: '20px',
+      paddingTop: '40px',
+      marginTop: '15px',
+      marginBottom: '15px',
   },
   itemCount: {
     fontFamily: 'Quicksand',
@@ -33,7 +33,8 @@ const useStyles = makeStyles({
   },
   stripePay: {
     textAlign: 'center',
-    paddingTop: '50px',
+    paddingTop: '15px',
+    paddingBottom: '50px',
   },
 });
 
@@ -89,7 +90,7 @@ const Cart = () => {
                     billingAddress
                     shippingAddress
                 >
-                  <button className="btn-small purple">Buy Now</button>
+                  <button className="btn-large pink lighten-3">Buy Now</button>
                 </StripeCheckout>
 
         </div>
