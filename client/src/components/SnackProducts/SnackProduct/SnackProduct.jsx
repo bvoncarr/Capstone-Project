@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
+
 import { CartContext } from '../../../context/CartContext';
 import { Card, CardMedia, CardContent, CardActions, Typography, IconButton } from '@material-ui/core';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 // import { Classes } from '@material-ui/styles';
 import useStyles from './styles';
 import Tooltip from '@material-ui/core/Tooltip';
+
 
 const SnackProduct = ({ product }) => {
     const classes = useStyles();

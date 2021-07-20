@@ -3,12 +3,24 @@ import StripeCheckout from 'react-stripe-checkout';
 import { CartContext } from '../../context/CartContext';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
+import {toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Confetti from 'react-confetti';
 import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 import CartItem from './CartItem/CartItem';
 
 
+toast.configure();
+const notify = () => {
+  toast.success('Thank you for you purchase!!', {
+    position: toast.POSITION.TOP_CENTER,
+    autoClose: false,
+    delay: 12000,
+    
+  })
+}
 
 
 const fetch = require('node-fetch');
@@ -47,7 +59,6 @@ function handleToken(token, addresses) {
     console.log({token, addresses })
 }
 
-
 const Cart = () => {
     const classes = useStyles();
     const [cart, setCart] = useContext(CartContext);
@@ -61,7 +72,7 @@ const Cart = () => {
     return (
     
         <div className={classes.root}>
-         
+         <Confetti/>
         <Typography component="h1" className={classes.title}>
          Cart Items 
          
@@ -89,7 +100,8 @@ const Cart = () => {
                     billingAddress
                     shippingAddress
                 >
-                  <button className="btn-small purple">Buy Now</button>
+                  <button onClick={notify}className="btn-small purple">Buy Now</button>
+                  
                 </StripeCheckout>
 
         </div>

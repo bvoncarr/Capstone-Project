@@ -2,9 +2,12 @@ import React, {useState, useEffect} from 'react';
 import Grid from '@material-ui/core/Grid';
 import SnackProduct from './SnackProduct/SnackProduct';
 import Box from '@material-ui/core/Box';
+// import Confetti from 'react-confetti';
 import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Snack from '../Landing-Page/Snack';
+
+
 
 const fetch = require('node-fetch');
 
