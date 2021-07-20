@@ -18,7 +18,7 @@ const places = [
         time: 1500,
     },
      {
-        title: 'The Merch',
+        title: 'Space Swag',
         description: "No trip to outer space is complete without some swag. Get your moon or Mars tshirts for your flight!",
         imageUrl: process.env.PUBLIC_URL + '/images/moon-marsShirts.jpg',
         time: 1500,

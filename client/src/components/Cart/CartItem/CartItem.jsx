@@ -49,7 +49,7 @@ const CartItem = ({ product }) => {
         <Card className={classes.root}>
             <CardMedia 
                 className={classes.media}
-                 image="/images/doge-moon.jpeg"
+                 image={product.image}
                 title={product.name}/>
             <CardContent>
                 <div className={classes.cardContent}>

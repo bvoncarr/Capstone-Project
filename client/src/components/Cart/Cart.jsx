@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Confetti from 'react-confetti';
 import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
 
 import CartItem from './CartItem/CartItem';
 
@@ -17,8 +18,8 @@ const notify = () => {
   toast.success('Thank you for you purchase!!', {
     position: toast.POSITION.TOP_CENTER,
     autoClose: false,
-    delay: 12000,
-    
+    delay: 30000,
+   
   })
 }
 
@@ -138,8 +139,10 @@ const Cart = () => {
                 </StripeCheckout>
 
         </div>
-          
-   
+          <div style={{textAlign: 'center'}}>
+            <Link className="btn-small purple" to='/' >Continue Shopping</Link>
+          </div>
+              
         
         </div>
       
