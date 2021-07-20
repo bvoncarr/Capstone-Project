@@ -4,10 +4,23 @@ import { AppBar, IconButton, Button } from '@material-ui/core';
 import Toolbar from '@material-ui/core/Toolbar';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Collapse from '@material-ui/core/Collapse';
+import useSound from 'use-sound';
+import newMusic from '../../audioclips/newMusic.mp3';
 import { Link as Scroll } from 'react-scroll';
 import ConfirmationNumberIcon from '@material-ui/icons/ConfirmationNumber';
 import { Link, withRouter, Router, Switch, BrowserRouter } from "react-router-dom";
 
+
+
+
+const MusicButton = () => {
+  const [play] = useSound(newMusic);
+
+  return <button onClick={play}>Click!</button>;
+};
+
+
+    
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -72,12 +85,14 @@ export default function Header() {
         setChecked(true);
     },[])
     return (
+        
         <div className={classes.root} id="header">
            <Collapse in={checked} {...(checked ? { timeout: 1000 } : {})} collapsedSize={50}>
            <div className={classes.container}>
                <h1 className={classes.dreamIntro}>Is your dream to go to outer <span className={classes.colorText}>space</span>?</h1>
                <p className={classes.moreInfo}>We can get you to the <span className={classes.moreInfoColor}>Moon</span> AND <span className={classes.moreInfoColor}>Mars</span>. </p> 
                <p className={classes.moreInfo}>Select your tickets from <span className={classes.moreInfoColor}>Virgin Galactic</span> or <span className={classes.moreInfoColor}>SpaceX</span>.</p> 
+               
                
                <Button
                startIcon={<ConfirmationNumberIcon />}
@@ -103,6 +118,7 @@ export default function Header() {
                 
            </div>
             </Collapse>
+            <MusicButton/>
         </div>
     );
 }
