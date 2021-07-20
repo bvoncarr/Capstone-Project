@@ -8,7 +8,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 
 const MerchProduct = ({ product }) => {
     const classes = useStyles();
-    const [cart, setCart] = useContext(CartContext);
+    const [setCart] = useContext(CartContext);
     const addToCart = () => {
 
         const cartProduct = {name: product.item, price: product.price, description: product.description, image: product.pics};

@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, IconButton, Button } from '@material-ui/core';
-import Toolbar from '@material-ui/core/Toolbar';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { Button } from '@material-ui/core';
+
 import Collapse from '@material-ui/core/Collapse';
 import useSound from 'use-sound';
 import newMusic from '../../audioclips/newMusic.mp3';
-import { Link as Scroll } from 'react-scroll';
+
 import ConfirmationNumberIcon from '@material-ui/icons/ConfirmationNumber';
-import { Link, withRouter, Router, Switch, BrowserRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 

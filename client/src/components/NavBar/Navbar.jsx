@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
-import { Link, withRouter, Router, Switch, BrowserRouter } from "react-router-dom";
-import { AppBar, Toolbar, IconButton, Badge, MenuItem, Menu, Typography, Tab, Tabs, TabScrollButton } from '@material-ui/core';
+import { Link } from "react-router-dom";
+import { AppBar, Toolbar, IconButton, Badge, Typography, Tab, Tabs } from '@material-ui/core';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 import tothemoon from '../../assets/tothemoon.png';
-import moon from '../../assets/moon.png';
+
 import useStyles from './styles';
 import Tooltip from '@material-ui/core/Tooltip';
 
@@ -14,7 +14,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 const Navbar = () => {
     const classes = useStyles();
     const routes = ["/moonproducts","/marsproducts","/","/cart","/snackproducts","/merchproducts"]
-    const [cart, setCart] = useContext(CartContext);
+    const [cart] = useContext(CartContext);
 
     return (
 

@@ -6,8 +6,7 @@ import MerchProducts from './components/MerchProducts/MerchProducts';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from './components/NavBar/Navbar';
 import Cart from './components/Cart/Cart';
-import {Howl, Howler} from 'howler';
-import StripeCheckout from 'react-stripe-checkout';
+
 import { makeStyles } from '@material-ui/core/styles';
 import { CssBaseline } from '@material-ui/core';
 import { CartProvider } from './context/CartContext'
@@ -27,18 +26,19 @@ const useStyles = makeStyles((theme) => ({
 const App = () => {
     const classes = useStyles();
     
-    
+    // eslint-disable-next-line
       return (
           <>
-          
+        
           <CartProvider>
           <div className={classes.root}>
-          
             <CssBaseline />
           <Router>
             <Navbar />
+          
             <Switch>
-              <Route exact path="/" exact component={Header} />
+            
+              <Route exact path="/"component={Header} />
               <Route path="/moonproducts"><MoonProducts /></Route>
               <Route path="/marsproducts"><MarsProducts /></Route>
               <Route path="/snackproducts"><SnackProducts /></Route>

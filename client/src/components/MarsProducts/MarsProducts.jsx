@@ -21,12 +21,6 @@ const useStyles = makeStyles({
   
 });
 
-const products = [
-
-    { id: 3, name: 'Mars Ticket - Single', description: "I'm going to Mars!", price: '$200', image: './images/tickets.jpg'},
-    { id: 4, name: 'Family Mars Ticket Package', description: "We're all going to Mars!" , price: '$2000', image: './images/tickets.jpg'},
-];
-
 
 
 const MarsProducts = () => {

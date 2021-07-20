@@ -34,11 +34,11 @@ const useStyles = makeStyles({
 // console.log(getThisData());
 
 
-const products = [
-    { id: 1, name: 'Moon Ticket - Single', description: "I'm going to the moon!", price: '$50', image: './images/tickets.jpg'},
-    { id: 2, name: 'Family Moon Ticket Package', description: "We're all going to the moon!", price: '$500', image: './images/tickets.jpg'},
+// const products = [
+//     { id: 1, name: 'Moon Ticket - Single', description: "I'm going to the moon!", price: '$50', image: './images/tickets.jpg'},
+//     { id: 2, name: 'Family Moon Ticket Package', description: "We're all going to the moon!", price: '$500', image: './images/tickets.jpg'},
 
-];
+// ];
 
 const SnackProducts = () => {
   const classes = useStyles();

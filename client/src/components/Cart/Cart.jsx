@@ -25,7 +25,7 @@ const notify = () => {
 
 
 
-const fetch = require('node-fetch');
+// const fetch = require('node-fetch');
 
 const useStyles = makeStyles({
   
@@ -92,6 +92,7 @@ const Cart = () => {
      
         <div className={classes.root} onMouseEnter={() => handleShow(true)}
         onMouseLeave={() => handleShow(false)}
+        // eslint-disable-next-line
         className="confetti-wrap"
         ref={confettiRef}>
         <Confetti
