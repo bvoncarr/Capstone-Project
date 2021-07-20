@@ -14,7 +14,7 @@ import { Link, withRouter, Router, Switch, BrowserRouter } from "react-router-do
 
 
 const MusicButton = () => {
-  const [play] = useSound(newMusic, {volume: 0.1});
+  const [play] = useSound(newMusic, {volume: 0.02});
   
 
   return <button onClick={play} style={{backgroundColor: '#4C4CA9', color: '#FB8DA0', borderRadius: '15px', marginTop: '240px', fontSize: '12px'}}>Click!</button>;
