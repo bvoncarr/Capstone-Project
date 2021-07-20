@@ -56,7 +56,7 @@ const MerchProducts = () => {
     <main>
     <Merch />
     <Typography component="h1"
-    className={classes.title}>Available Merch</Typography>
+    className={classes.title}>Available Swag</Typography>
 
     <div id="merchProducts">
      <Box mx={2}  boxShadow={3}>

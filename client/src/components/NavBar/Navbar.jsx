@@ -53,7 +53,7 @@ const Navbar = () => {
                             />
                             <Tab 
                                 
-                                label="The Merch"
+                                label="Space Swag"
                                 value={routes[5]}
                                 component={Link}
                                 to={routes[5]}
