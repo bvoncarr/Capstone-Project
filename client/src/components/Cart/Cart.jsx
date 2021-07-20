@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useContext} from 'react';
+import React, {useState, useEffect, useContext, useRef} from 'react';
 import StripeCheckout from 'react-stripe-checkout';
 import { CartContext } from '../../context/CartContext';
 import Grid from '@material-ui/core/Grid';
@@ -23,6 +23,7 @@ const notify = () => {
 }
 
 
+
 const fetch = require('node-fetch');
 
 const useStyles = makeStyles({
@@ -33,7 +34,7 @@ const useStyles = makeStyles({
       fontSize: '30px',
       color: '#fff',
       textAlign: 'center',
-      paddingTop: '40px',
+      paddingTop: '60px',
       marginTop: '15px',
       marginBottom: '15px',
   },
@@ -50,11 +51,6 @@ const useStyles = makeStyles({
   },
 });
 
-// const products = [
-
-//     { id: 3, name: 'Mars Ticket - Single', description: "I'm going to Mars!", price: '$200', image: './images/tickets.jpg'},
-//     { id: 4, name: 'Family Mars Ticket Package', description: "We're all going to Mars!" , price: '$2000', image: './images/tickets.jpg'},
-// ];
 
 function handleToken(token, addresses) {
     console.log({token, addresses })
@@ -63,17 +59,48 @@ function handleToken(token, addresses) {
 const Cart = () => {
     const classes = useStyles();
     const [cart, setCart] = useContext(CartContext);
+    const [height, setHeight] = useState(null);
+    const [width, setWidth] = useState(null);
+    const [show, setShow] = useState(false);
+    const confettiRef = useRef(null);
     
-    const totalPrice = cart.reduce((acc, curr) => acc + curr.price, 0);
+  useEffect(() => {
+    setHeight(confettiRef.current.clientHeight);
+    setWidth(confettiRef.current.clientWidth);
+  }, [])
 
-    
+  const handleShow = toggle => {
+    setShow(toggle);
+  }
+  
+  const totalPrice = cart.reduce((acc, curr) => acc + curr.price, 0);
+
+  
     
     console.log(cart.length);
+
+      const clearCart = (productsToRemove) => {
+      setCart(
+        cart.filter((product) => product.id !== productsToRemove.id)
+      ) 
+    }
+
     
     return (
-    
-        <div className={classes.root}>
-         <Confetti/>
+      
+     
+        <div className={classes.root} onMouseEnter={() => handleShow(true)}
+        onMouseLeave={() => handleShow(false)}
+        className="confetti-wrap"
+        ref={confettiRef}>
+        <Confetti
+          recycle={show}
+          numberOfPieces={80}
+          width={width}
+          height={height}
+        />
+
+         
         <Typography component="h1" className={classes.title}>
          Cart Items 
          
@@ -84,6 +111,8 @@ const Cart = () => {
             <Grid item key={product.id}  xs={12} sm={6} md={4} lg={3}>
                 <CartItem product={product} />
             </Grid>
+
+
             ))}
         
         </Grid>
@@ -102,16 +131,18 @@ const Cart = () => {
                     shippingAddress
                 >
 
-                  <button onClick={notify}className="btn-small purple">Buy Now</button>
+                  <button onMouseOut={clearCart} onClick={notify}  className="btn-small purple" >Buy Now</button>
+                  <br/>
                   
-
+             
                 </StripeCheckout>
 
         </div>
           
+   
         
         </div>
-    
+      
       )
         
      

@@ -72,7 +72,7 @@ const CartItem = ({ product }) => {
          
            
             <CardActions disableSpacing className={classes.CardActions}>
-                <Tooltip title="Add Item">
+                {/* <Tooltip title="Add Item">
                     <IconButton aria-label="Add Item" className={classes.addIcon} >
                         <AddBoxIcon onClick={console.log("you clicked me")}/>
                     </IconButton>
@@ -81,7 +81,7 @@ const CartItem = ({ product }) => {
                     <IconButton aria-label="Remove Item" className={classes.removeIcon}>
                         <IndeterminateCheckBoxIcon onClick={console.log("you clicked me")}/>
                     </IconButton>
-                </Tooltip>
+                </Tooltip> */}
                 <Tooltip title="Clear Cart">
                     <IconButton aria-label="Clear Cart" className={classes.clearCart}>
                         <RemoveShoppingCartIcon onClick={clearCart}/>
