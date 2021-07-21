@@ -27,7 +27,7 @@ const MerchProducts = () => {
   const [merchData, setMerchData] = useState([])
   useEffect(() => {
     // Update the document title using the browser API
-    fetch("http://localhost:5000/merch")
+    fetch("API_URL")
           .then((res) => res.json())
           .then((data) => setMerchData(data));
 

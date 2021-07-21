@@ -45,7 +45,7 @@ const SnackProducts = () => {
   const [snackData, setSnackData] = useState([])
   useEffect(() => {
     // Update the document title using the browser API
-    fetch("http://localhost:5000/snacks")
+    fetch("API_URL")
           .then((res) => res.json())
           .then((data) => setSnackData(data));
 
