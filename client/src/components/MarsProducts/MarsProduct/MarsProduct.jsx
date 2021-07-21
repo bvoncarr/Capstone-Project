@@ -9,7 +9,8 @@ import Tooltip from '@material-ui/core/Tooltip';
 
 const MarsProduct = ({ product }) => {
     const classes = useStyles();
-    const [setCart] = useContext(CartContext);
+    // eslint-disable-next-line
+    const [cart, setCart] = useContext(CartContext);
     const addToCart = () => {
 
         const cartProduct = {name: product.company, price: product.price, spaceship: product.spaceship, image: product.pics};
