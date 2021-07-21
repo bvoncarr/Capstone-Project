@@ -28,7 +28,7 @@ const MarsProducts = () => {
   const [marsData, setMarsData] = useState([])
   useEffect(() => {
     // Update the document title using the browser API
-    fetch("http://localhost:5000/mars")
+    fetch("API_URL")
           .then((res) => res.json())
           .then((data) => setMarsData(data));
 
