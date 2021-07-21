@@ -32,7 +32,7 @@ const MoonProducts = () => {
   const [moonData, setMoonData] = useState([])
   useEffect(() => {
     // Update the document title using the browser API
-    fetch("API_URL")
+    fetch("http://localhost:5000/moon")
           .then((res) => res.json())
           .then((data) => setMoonData(data));
 
