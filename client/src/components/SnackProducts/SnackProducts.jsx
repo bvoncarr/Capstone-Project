@@ -45,7 +45,7 @@ const SnackProducts = () => {
   const [snackData, setSnackData] = useState([])
   useEffect(() => {
     // Update the document title using the browser API
-    fetch("http://localhost:5000/snacks")
+    fetch("https://moon-or-mars.herokuapp.com/snacks")
           .then((res) => res.json())
           .then((data) => setSnackData(data));
 

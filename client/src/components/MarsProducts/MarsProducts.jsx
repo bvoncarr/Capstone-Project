@@ -28,7 +28,7 @@ const MarsProducts = () => {
   const [marsData, setMarsData] = useState([])
   useEffect(() => {
     // Update the document title using the browser API
-    fetch("API_URL")
+    fetch("https://moon-or-mars.herokuapp.com/mars")
           .then((res) => res.json())
           .then((data) => setMarsData(data));
 
